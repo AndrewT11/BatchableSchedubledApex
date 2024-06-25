@@ -4,6 +4,9 @@
 //Create schedulable apex that will execute the batch class above. 
  
 //Schedule your schedulable apex to run at 12 am at the first of every month. Take a screenshot of your scheduled job from within the setup menu and include it in the repo 
+// In anonynmous apex, I ran the following:
+// String cronExpression = '0 0 0 1 * ?';
+// System.schedule('RevChallenge Batch Jobs', cronExpression, new RevChallengeScheduleApex);
 
 public with sharing class RevChallengeBatchable implements Database.Batchable<sObject> {
 
